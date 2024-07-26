@@ -1,9 +1,42 @@
-.aboutbanner {
-  position: absolute;
-
-  bottom: 0;
-  z-index: 1;
-  object-fit: cover;
+.about-card {
   width: 100%;
-  height: 20%;
+  height: 180px;
+  position: relative;
+  overflow: hidden; /* Ensures the image stays within the div */
+}
+
+.moving-image {
+  width: 100%;
+  height: 400px; /* Set a height larger than the .about-card to create the movement effect */
+  background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  top: -100px; /* Start position to ensure the image is centered in the div */
+  animation: MoveUpDown 5s linear infinite alternate;
+}
+.call-to-action {
+  border: 1px solid white;
+  background-color: none;
+  background: none;
+  padding: 14px 34px;
+  border-radius: 50px;
+  color: white;
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.3s ease; /* Smooth transition for background, color, and transform*/
+}
+
+.call-to-action:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  background: white;
+  color: black;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(-50px); /* Move image up */
+  }
+  100% {
+    transform: translateY(50px); /* Move image down */
+  }
 }

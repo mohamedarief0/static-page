@@ -1,14 +1,13 @@
 import React from "react";
 import "./Contact.css";
-import Imgbg from "../../Asset/2.png";
 import { Link } from "react-router-dom";
 
 function Contact() {
   return (
     <>
-      <section id="contact" className="backgroundcontact position-relative ">
-        {/* <img src={Imgbg} className="contactimg" alt="bg-img" /> */}
-        <div className="container mt-5">
+      <section id="contact" className="backgroundcontact position-relative">
+        <div className="moving-image"></div>
+        <div className="container mt-5 position-relative" style={{ zIndex: 1 }}>
           <div className="text-center text-white row justify-content-around p-5">
             <div className="col-md-3 mb-3">
               <h5>
@@ -75,7 +74,8 @@ function Contact() {
             </div>
           </div>
         </div>
-
+      </section>
+      <section>
         <div id="footer" className="backgroundfooter p-5 lh-1">
           <div className="container text-center text-white">
             <p>
@@ -83,7 +83,10 @@ function Contact() {
               <span>Cloud Garage LLP All rights reserved</span>
             </p>
             <p>
-              <Link to="/terms" className="text-white-50 termandconditionshover">
+              <Link
+                to="/terms"
+                className="text-white-50 termandconditionshover"
+              >
                 Terms & Conditions | Privacy Policy
               </Link>
             </p>

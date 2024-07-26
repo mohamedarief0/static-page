@@ -39,12 +39,20 @@ function About() {
             </div>
           </div>
         </div>
-        {/* <LazyLoadImage
-          src={aboutbannerbg}
-          className="aboutbanner"
-          alt="banner-img"
-          effect="blur"
-        /> */}
+        <div className="about-card">
+          <div className="row d-flex  align-items-center p-5">
+            <div className="text-white col">
+              <p className="fs-5">Download Tik Tik tody</p>
+              <h1>Download Tik Tik tody</h1>
+            </div>
+            <div className="col">
+              <button className="call-to-action">Google play</button>
+              <button className="call-to-action ms-5">Apple store</button>
+            </div>
+          </div>
+
+          <div className="moving-image"></div>
+        </div>
       </section>
     </>
   );
