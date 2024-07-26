@@ -1,5 +1,5 @@
 .margin-top {
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .screen {
   height: 80vh;
@@ -13,4 +13,23 @@
 }
 .line-height {
   line-height: 2.5rem;
+}
+.carousel-index{
+  z-index: -1;
+}
+/* .margin-on-title{
+  margin-top: 200px;
+} */
+
+@media (max-width:576px) {
+  .herocontainers{
+    margin: 13px;
+  }
+.margin-top {
+  margin-top: 100px;
+}
+.sm-d-none{
+  display: none;
+}
+  
 }

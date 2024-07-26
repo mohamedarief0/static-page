@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  width: 300px; /* Adjust as needed */
+  width: 260px; /* Adjust as needed */
   height: 400px; /* Adjust as needed */
   /* overflow: hidden; */
   margin-right: 120px;
@@ -8,11 +8,10 @@
 
 .carousel-img {
   position: absolute;
-  transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1), 
-              top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              right 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              z-index 0.5s ease-out;
+  transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+    top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+    left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+    right 360ms cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.5s ease-out;
   width: 200px; /* Adjust as needed */
   height: auto; /* Adjust as needed */
 }
@@ -40,23 +39,82 @@
   width: 70%; /* Adjust as needed */
 }
 
-@media (max-width :1200px) {
-    .carousel {
-  position: relative;
-  width: 200px; /* Adjust as needed */
-  height: 300px; /* Adjust as needed */
-  /* overflow: hidden; */
-  margin-right: 120px;
-}
+@media (max-width: 1200px) {
+  .carousel {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    /* overflow: hidden; */
+    margin-right: 120px;
+  }
 
-.carousel-img {
-  position: absolute;
-  transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1), 
-              top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              right 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
-              z-index 0.5s ease-out;
-  width: 170px; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
+  .carousel-img {
+    position: absolute;
+    transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      right 360ms cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.5s ease-out;
+    width: 170px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+  }
 }
+@media (max-width:992px) {
+  .carousel {
+    position: relative;
+    width: 180px; /* Adjust as needed */
+    height: 280px; /* Adjust as needed */
+    /* overflow: hidden; */
+    /* margin-right: 120px; */
+    top: 60px;
+    margin: auto;
+  }
+  .carousel-img {
+    position: absolute;
+    transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      right 360ms cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.5s ease-out;
+    width: 120px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+  }
+}
+@media (max-width:768px) {
+  .carousel {
+    position: relative;
+    width: 180px; /* Adjust as needed */
+    height: 360px; /* Adjust as needed */
+    /* overflow: hidden; */
+    /* margin-right: 120px; */
+    top: 60px;
+    margin: auto;
+  }
+  .carousel-img {
+    position: absolute;
+    transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      right 360ms cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.5s ease-out;
+    width: 120px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+  }
+}
+@media (max-width: 576px) {
+  .carousel {
+    position: relative;
+    width: 100px; /* Adjust as needed */
+    height: 250px; /* Adjust as needed */
+    /* overflow: hidden; */
+    /* margin-right: 120px; */
+    top: 60px;
+    margin: auto;
+  }
+  .carousel-img {
+    position: absolute;
+    transition: transform 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      top 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      left 360ms cubic-bezier(0.25, 0.8, 0.25, 1),
+      right 360ms cubic-bezier(0.25, 0.8, 0.25, 1), z-index 0.5s ease-out;
+    width: 120px; /* Adjust as needed */
+    height: auto; /* Adjust as needed */
+  }
 }

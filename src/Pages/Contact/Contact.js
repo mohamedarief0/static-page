@@ -1,11 +1,12 @@
 import React from "react";
 import "./Contact.css";
 import Imgbg from "../../Asset/2.png";
+import { Link } from "react-router-dom";
 
 function Contact() {
   return (
     <>
-      <section id="contact" className="backgroundcontact position-relative">
+      <section id="contact" className="backgroundcontact position-relative ">
         {/* <img src={Imgbg} className="contactimg" alt="bg-img" /> */}
         <div className="container mt-5">
           <div className="text-center text-white row justify-content-around p-5">
@@ -21,46 +22,46 @@ function Contact() {
               </h5>
               <ul className="list-unstyled">
                 <li>
-                  <a
-                    href="https://cloudgarage.io"
+                  <Link
+                    to="https://cloudgarage.io"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-decoration-none text-white"
                   >
                     <i className="ri-global-line"></i> cloudgarage.io
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="mailto:tiktikappcontact@gmail.com"
+                  <Link
+                    to="mailto:tiktikappcontact@gmail.com"
                     className="text-decoration-none text-white"
                   >
                     <i className="ri-mail-fill"></i> tiktikappcontact@gmail.com
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="tel:+919597059693"
+                  <Link
+                    to="tel:+919597059693"
                     className="text-decoration-none text-white"
                   >
                     <i className="ri-phone-fill"></i> +91 95970 59693
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
             <div className="col-md-3 mb-3">
               <h5>Social Media</h5>
               <div className="d-flex justify-content-evenly social-icons">
-                <a
-                  href="https://wa.me/919597059693"
+                <Link
+                  to="https://wa.me/919597059693"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-decoration-none text-white"
                 >
                   <i style={{ fontSize: 30 }} className="ri-whatsapp-fill"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/your-linkedin-profile/"
+                </Link>
+                <Link
+                  to="https://www.linkedin.com/company/cloud-garage-llp/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-decoration-none text-white"
@@ -69,7 +70,7 @@ function Contact() {
                     style={{ fontSize: 30 }}
                     className="ri-linkedin-box-fill"
                   ></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -82,9 +83,9 @@ function Contact() {
               <span>Cloud Garage LLP All rights reserved</span>
             </p>
             <p>
-              <a href="/terms" className="text-white-50 termandconditionshover">
+              <Link to="/terms" className="text-white-50 termandconditionshover">
                 Terms & Conditions | Privacy Policy
-              </a>
+              </Link>
             </p>
           </div>
         </div>

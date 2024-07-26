@@ -3,6 +3,7 @@ import { db } from "../../firebase.js";
 import { addDoc, collection } from "firebase/firestore";
 import "./Enroll.css";
 import dotBg from "../../Asset/enroll-dot-bg.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const initialState = {
   name: "",
@@ -29,51 +30,32 @@ function Enroll() {
     }
 
     try {
-      await addDoc(collection(db, "enrollments"), {
-        name,
-        email,
-        message,
-        number,
-        createdAt: new Date(),
+      await addDoc(collection(db, "mail"), {
+        to: "tiktikappcontact@gmail.com",
+        message: {
+          subject: "Enrolling for the ticket App",
+          text: "This is the plaintext section of the email body.",
+          html: `
+            <p>Enroller Name: ${name}</p>
+              <p>Enroll email id: ${email}</p>
+              <p>Enroll Phone Number: ${number}</p>
+              <p>Message: ${message}</p>
+            `,
+        },
       });
-      // alert("Data successfully sent!");
+
       clearState();
     } catch (error) {
       console.error("Error adding document: ", error);
     }
   };
 
-  //  const sendEmail = async () => {
-  //   try {
-  //     // Fetch the image URL
-  //     const imageUrl = await getImageUrl(id); // Assuming you use currentUser.uid as the image ID
-  
-  //     // Compose the email content with the fetched image URL
-  //     await firestore()
-  //       .collection('mail')
-  //       .add({
-  //         to: [email],
-  //         message: {
-  //           subject: 'Your Ticket',
-  //           text: 'This is the plaintext section of the email body.',
-  //           html: `
-  //             <p>Your email id: ${email}</p>
-  //             <p>Your Phone Number: ${phoneNumber}</p>
-  //             <p>Your ticket count: ${ticketCount}</p>
-  //             <p>Movie Name: ${movieName}</p>
-  //             <p>Team Name: ${teamNames}</p>
-  //             <p>Total ticket Amount: ${totalAmount}</p>
-  //             <p>Current user id: ${currentUser.uid}</p>
-  //             <p>Click the link below to download your ticket image:</p>
-  //             <a href="${imageUrl}" download="ticket.jpg">Download Image</a>
-  //           `,
-  //         },
-  //       });
-
   return (
-    <section id="enroll" className="position-relative p-5">
-      <img src={dotBg} className="imgDotBg" alt="background-dot-img" />
-      <div className="container screen card card-body Enroll-cards-shadow p-4">
+    <section
+      id="enroll"
+      className="align-items-center position-relative margin-top p-5"
+    >
+      <div className="container card card-body Enroll-cards-shadow p-4">
         <div className="col-md-8 mb-5">
           <div className="row">
             <div className="section-title">
@@ -81,7 +63,7 @@ function Enroll() {
               <p>Write us a message</p>
             </div>
             <form name="sentMessage" validate="true" onSubmit={handleSubmit}>
-              <div className="row">
+              <div className="row row-cols-md-1">
                 <div className="col-md-4">
                   <div className="form-group">
                     <input
@@ -124,33 +106,37 @@ function Enroll() {
                       onChange={handleChange}
                       value={email}
                     />
-                    <p className="help-block text-danger"></p>
                   </div>
+                  <p className="help-block text-danger"></p>
                 </div>
               </div>
-              <div className="form-group col-md-12">
-                <textarea
-                  name="message"
-                  id="message"
-                  className="form-control"
-                  rows="4"
-                  placeholder="Message"
-                  required
-                  onChange={handleChange}
-                  value={message}
-                ></textarea>
-                <p className="help-block text-danger"></p>
+              <div className="row">
+                <div className="form-group col-md-8">
+                  <textarea
+                    name="message"
+                    id="message"
+                    className="form-control col-md-6"
+                    rows="2"
+                    placeholder="Message"
+                    required
+                    onChange={handleChange}
+                    value={message}
+                  ></textarea>
+                  <p className="help-block text-danger"></p>
+                </div>
+                <div className="col-md-auto">
+                  <button type="submit" className="btn btnBgcolor col-md-auto">
+                    Send Message
+                  </button>
+                </div>
               </div>
-              <div id="success"></div>
-              <button type="submit" className="btn btnBgcolor col-md-6">
-                Send Message
-              </button>
             </form>
           </div>
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d718.840051490722!2d78.86531836774813!3d11.240797495759631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab1bd69cdd255f%3A0x767e4a62853d4127!2scloud%20garage%20llp!5e0!3m2!1sen!2sin!4v1721906801479!5m2!1sen!2sin"
           loading="lazy"
+          style={{ width: "auto", height: "max-content" }}
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>

@@ -13,6 +13,7 @@ import Contact from "./Pages/Contact/Contact";
 
 const App = () => {
   return (
+    
     <>
       <NavBar />
       <Home />
