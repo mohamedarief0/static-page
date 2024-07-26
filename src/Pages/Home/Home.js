@@ -12,13 +12,10 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function Home() {
   return (
     <>
-      <header
-        id="home"
-        className="container margin-top herocontainers position-relative"
-      >
+      <header id="home">
         <div
           id="carouselExampleCaptions"
-          className="carousel slide position-absolute w-auto carousel-index sm-d-none"
+          className="carousel slide margin-top-hero-carousal sm-d-none"
           data-bs-ride="carousel"
         >
           <div className="carousel-indicators">
@@ -47,7 +44,7 @@ function Home() {
             <div className="carousel-item active">
               <img src={RollImageOne} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
-                <h5> Buy and sell extra tickets in snap</h5>
+                <h5>First slide label</h5>
                 <p>
                   Some representative placeholder content for the first slide.
                 </p>
@@ -72,29 +69,59 @@ function Home() {
               </div>
             </div>
           </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
-        <div className="row row-cols-md-2 row-cols-sm-1  justify-content-between align-items-end  margin-on-title">
-          <div className="">
-            <h4 className="line-height brandtextcolor col-md-8">
-              <span className="brandcolor">Tik Tik</span> is Movie, Sports and
-              Event a Ticket Resale Platform
-            </h4>
-            <p className="text-black-50">
-              Don't the fun. It's simple and quick.
-            </p>
-            <span>
-              <Link
-                className=""
-                to="https://play.google.com/store/apps/details?id=com.TikTik"
-              >
-                <LazyLoadImage src={playstoreImg} width={120} alt="playstore-img" />
-              </Link>
-              <Link className="ms-3" href="">
-                <img src={appstoreImg} width={120} alt="appstore-img" />
-              </Link>
-            </span>
+        <div className="container margin-header-minus herocontainers position-relative">
+          <div className="row row-cols-sm-1 row-cols-md-2 justify-content-between align-items-center  margin-on-title">
+            <div className="">
+              <h2 className="line-height brandtextcolor col-md-10">
+                <span className="brandcolor">Tik Tik</span> is Movie, Sports and
+                Event a Ticket Resale Platform
+              </h2>
+              <p className="text-black-50">
+                Don't the fun. It's simple and quick.
+              </p>
+              <span>
+                <Link
+                  className=""
+                  to="https://play.google.com/store/apps/details?id=com.TikTik"
+                >
+                  <LazyLoadImage
+                    src={playstoreImg}
+                    width={120}
+                    alt="playstore-img"
+                  />
+                </Link>
+                <Link className="ms-3" href="">
+                  <img src={appstoreImg} width={120} alt="appstore-img" />
+                </Link>
+              </span>
+            </div>
+            <ImageCarousel />
           </div>
-          <ImageCarousel />
         </div>
       </header>
     </>
