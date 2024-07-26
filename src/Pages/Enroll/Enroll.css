@@ -1,0 +1,25 @@
+.Enroll-cards-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btnBgcolor {
+  background: #19def1;
+  color: white;
+  padding: 14px 24px;
+  font-size: 16px;
+}
+.btnBgcolor:hover{
+  background: #8deef7;
+  color: white;
+}
+
+/* Enroll.css */
+.imgDotBg {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
