@@ -136,7 +136,7 @@ function Enroll() {
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d718.840051490722!2d78.86531836774813!3d11.240797495759631!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bab1bd69cdd255f%3A0x767e4a62853d4127!2scloud%20garage%20llp!5e0!3m2!1sen!2sin!4v1721906801479!5m2!1sen!2sin"
           loading="lazy"
-          style={{ width: "auto", height: "max-content" }}
+          style={{ width: "auto", height: "400px" }}
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
