@@ -1,18 +1,64 @@
-import React from "react";
-import "./NavBar.css"
-import logo from "../Asset/logo.png"
-function NavBar() {
+import React, { useState, useEffect } from "react";
+import "./NavBar.css";
+import logo from "../Asset/logo.png";
+
+const NavBar = () => {
+  const [activeLink, setActiveLink] = useState("home");
+
+  const handleSetActive = (section) => {
+    setActiveLink(section);
+    const element = document.getElementById(section);
+    const offset = 70; // Adjust this value to offset the scroll position
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = element.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2 rounded-5 ms-5 me-5 ">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2 rounded-5 ms-5 me-5">
         <div className="container-fluid">
-          <a class="navbar-brand" href="#home">
+          <a
+            className="navbar-brand"
+            href="#home"
+            onClick={() => handleSetActive("home")}
+          >
             <img
               src={logo}
               alt="Logo"
               width="50"
               height="50"
-              class="d-inline-block align-text-top"
+              className="d-inline-block align-text-top"
             />
           </a>
           <button
@@ -32,28 +78,59 @@ function NavBar() {
           >
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#home">
+                <a
+                  className={`nav-link ${
+                    activeLink === "home" ? "active" : ""
+                  }`}
+                  aria-current="page"
+                  href="#home"
+                  onClick={() => handleSetActive("home")}
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#feature">
+                <a
+                  className={`nav-link ${
+                    activeLink === "feature" ? "active" : ""
+                  }`}
+                  href="#feature"
+                  onClick={() => handleSetActive("feature")}
+                >
                   Feature
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">
+                <a
+                  className={`nav-link ${
+                    activeLink === "about" ? "active" : ""
+                  }`}
+                  href="#about"
+                  onClick={() => handleSetActive("about")}
+                >
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#enroll">
+                <a
+                  className={`nav-link ${
+                    activeLink === "enroll" ? "active" : ""
+                  }`}
+                  href="#enroll"
+                  onClick={() => handleSetActive("enroll")}
+                >
                   Enroll
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  contact
+                <a
+                  className={`nav-link ${
+                    activeLink === "contact" ? "active" : ""
+                  }`}
+                  href="#contact"
+                  onClick={() => handleSetActive("contact")}
+                >
+                  Contact
                 </a>
               </li>
             </ul>
@@ -62,6 +139,6 @@ function NavBar() {
       </nav>
     </div>
   );
-}
+};
 
 export default NavBar;

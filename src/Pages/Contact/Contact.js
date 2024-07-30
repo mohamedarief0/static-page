@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Contact.css";
 import { Link } from "react-router-dom";
 
@@ -75,7 +75,7 @@ function Contact() {
           </div>
         </div>
       </section>
-      <section>
+      <footer>
         <div id="footer" className="backgroundfooter p-5 lh-1">
           <div className="container text-center text-white">
             <p>
@@ -84,15 +84,21 @@ function Contact() {
             </p>
             <p>
               <Link
-                to="/terms"
+                to="/terms-and-conditions"
                 className="text-white-50 termandconditionshover"
               >
-                Terms & Conditions | Privacy Policy
+                Terms & Conditions |
+              </Link>
+              <Link
+                to="/Privacy-Policy"
+                className="text-white-50 termandconditionshover"
+              >
+                { " "}Privacy Policy
               </Link>
             </p>
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 }

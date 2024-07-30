@@ -1,7 +1,8 @@
 import React from "react";
 import "./About.css";
-import aboutbannerbg from "../../Asset/1.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
+import buyerAboutImg from "../../Asset/b-about-image.png";
+import UploderAboutImg from "../../Asset/u-about-image.png";
 function About() {
   return (
     <>
@@ -9,30 +10,43 @@ function About() {
         <div className="bg-light p-5 h-100">
           <div className="about-text container">
             <h1>About</h1>
-            <div className="mt-5 d-flex flex-row justify-content-between gap-5">
-              <div className="card col-md-3">
-                <div className=" card-body ">
-                  <h5>Movies</h5>
+            <div className="">
+              <div
+                data-aos="fade-left"
+                className="d-flex justify-content-between align-items-center flex-wrap"
+              >
+                <div className="col-md-5">
+                  <h5>Buyer</h5>
                   <p>
-                    TicketMaster is a convenient and user-friendly app designed
+                    Purchasing Tickets: Buyers must provide a valid WhatsApp
+                    number or email address to receive purchased tickets.{" "}
+                  </p>
+                  <p>
+                    Accuracy of Information: Buyers must ensure that the contact
+                    information provided is accurate and up-to-date. Tik Tik
+                    will not be responsible for any failure to deliver tickets
+                    due to incorrect contact information.
                   </p>
                 </div>
+                <img src={buyerAboutImg} width={400} />
               </div>
-              <div className="card col-md-3">
-                <div className=" card-body ">
-                  <h5>Sports</h5>
+
+              <div
+                data-aos="fade-right"
+                className="d-flex justify-content-between align-items-center"
+              >
+                <img src={UploderAboutImg} width={400} />
+                <div className="col-md-5">
+                  <h5>Uploder</h5>
                   <p>
-                    TicketMaster is a convenient and user-friendly app designed
-                    to help you purchase tickets for your favorite movies,
-                    events, and sports.
+                    Purchasing Tickets: Buyers must provide a valid WhatsApp
+                    number or email address to receive purchased tickets.{" "}
                   </p>
-                </div>
-              </div>
-              <div className="card col-md-3">
-                <div className=" card-body ">
-                  <h5>Events</h5>
                   <p>
-                    TicketMaster is a convenient and user-friendly app designed
+                    Accuracy of Information: Buyers must ensure that the contact
+                    information provided is accurate and up-to-date. Tik Tik
+                    will not be responsible for any failure to deliver tickets
+                    due to incorrect contact information.
                   </p>
                 </div>
               </div>
@@ -46,11 +60,19 @@ function About() {
               <h1>Download Tik Tik tody</h1>
             </div>
             <div className="col">
-              <button className="call-to-action">Google play</button>
-              <button className="call-to-action ms-5">Apple store</button>
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.TikTik"
+                className="call-to-action text-decoration-none"
+              >
+                <i className="ri-google-play-fill"></i>
+                Google play
+              </Link>
+              <Link className="call-to-action ms-5 text-decoration-none">
+                <i className="ri-apple-fill"></i>
+                Apple store
+              </Link>
             </div>
           </div>
-
           <div className="moving-image"></div>
         </div>
       </section>

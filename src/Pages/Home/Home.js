@@ -4,7 +4,11 @@ import ImageCarousel from "../../ImageCarousel/ImageCarousel";
 //img
 import playstoreImg from "../../Asset/google-play.png";
 import appstoreImg from "../../Asset/apple-store.png";
+//slider
 import RollImageOne from "../../Asset/roll 1.png";
+import RollImageTwo from "../../Asset/roll 2.png";
+import RollImageThree from "../../Asset/roll 3.png";
+
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,7 +16,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function Home() {
   return (
     <>
-      <header id="home">
+      {" "}
+      <div id="home"></div>
+      <header style={{ marginTop: "100px" }}>
         <div
           id="carouselExampleCaptions"
           className="carousel slide margin-top-hero-carousal sm-d-none"
@@ -51,7 +57,7 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageOne} className="d-block w-100" alt="..." />
+              <img src={RollImageTwo} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -60,7 +66,7 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageOne} className="d-block w-100" alt="..." />
+              <img src={RollImageThree} className="d-block w-100" alt="..." />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>

@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Features.css";
+import ModalVideo from "react-modal-video";
+import "react-modal-video/css/modal-video.min.css";
 
 function Features() {
+  const [isOpen, setOpen] = useState(false);
   return (
     <>
       <section id="feature" className="container-fluid margin-top">
@@ -80,7 +83,7 @@ function Features() {
                       className="ri-money-rupee-circle-fill"
                       style={{ fontSize: "40px", color: "#19def1" }}
                     ></i>
-                    <p className="mt-2">transaction</p>
+                    <p className="mt-2">Transaction</p>
                   </div>
                 </div>
               </div>
@@ -94,6 +97,29 @@ function Features() {
           </p>
         </div>
       </section>
+      <div className="about-card">
+        <div className=" row d-flex justify-content-center align-items-center h-100 ms-5 p-5">
+          <div className="text-white col">
+            <h1>Watch video presentation</h1>
+          </div>
+          <div className="col col-12 col-sm-5 align-self-center mb-30 position-relative">
+            <div className="play-frame play-rotate"></div>
+            <div onClick={() => setOpen(true)}>
+              <div className="play-button bg-color-1">
+                <i className="ri-play-large-fill"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="moving-image"></div>
+      </div>
+      <ModalVideo
+        channel="youtube"
+        isOpen={isOpen}
+        autoplay
+        videoId="of3PDj-E7Ck"
+        onClose={() => setOpen(false)}
+      />
     </>
   );
 }
