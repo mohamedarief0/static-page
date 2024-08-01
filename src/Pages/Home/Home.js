@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //Carousel
 import ImageCarousel from "../../ImageCarousel/ImageCarousel";
 //img
@@ -11,7 +11,8 @@ import RollImageThree from "../../Asset/roll 3.png";
 
 import "./Home.css";
 import { Link } from "react-router-dom";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import axios from "axios";
+
 import data from "../../Data/data.json"
 
 function Home() {
@@ -116,8 +117,7 @@ function Home() {
           <div className="row row-cols-sm-1 row-cols-md-2 justify-content-between align-items-center  margin-on-title">
             <div className="">
               <h2 className="line-height brandtextcolor col-md-10">
-                <span className="brandcolor">Tik Tik</span> is Movie, Sports and
-                Event a Ticket Resale Platform
+                <span className="brandcolor">{ data.heroSection.heading.brandName}</span> {data.heroSection.heading.text}
               </h2>
               <p className="text-black-50">{data.heroSection.description}</p>
               <span>

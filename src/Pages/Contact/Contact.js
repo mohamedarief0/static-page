@@ -1,6 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { Link } from "react-router-dom";
+import data from "../../Data/data.json"; // Update path if needed
 
 function Contact() {
   return (
@@ -11,73 +12,47 @@ function Contact() {
           <div className="text-center text-white row justify-content-around p-5">
             <div className="col-md-3 mb-3">
               <h5>
-                <i className="ri-compass-3-fill"></i> Location
+                <i className={data.contact.location.icon}></i> Location
               </h5>
-              <p>80G/3, Kamban Nagar, Elambalur Road, Perambalur-621212</p>
+              <p>{data.contact.location.address}</p>
             </div>
             <div className="col-md-3 mb-3">
               <h5>
                 <i className="ri-contacts-fill"></i> Contact
               </h5>
               <ul className="list-unstyled">
-                <li>
-                  <Link
-                    to="https://tiktik.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-decoration-none text-white"
-                  >
-                    <i className="ri-global-line"></i> tiktik.in
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="mailto:tiktikappcontact@gmail.com"
-                    className="text-decoration-none text-white "
-                  >
-                    <i className="ri-mail-fill"></i> tiktikappcontact@gmail.com
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="tel:+919597059693"
-                    className="text-decoration-none text-white"
-                  >
-                    <i className="ri-phone-fill"></i> +91 95970 59693
-                  </Link>
-                </li>
+                {data.contact.contact.links.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      to={link.href}
+                      target={link.type === "external" ? "_blank" : undefined}
+                      rel={
+                        link.type === "external"
+                          ? "noopener noreferrer"
+                          : undefined
+                      }
+                      className="text-decoration-none text-white"
+                    >
+                      <i className={link.icon}></i> {link.text}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="col-md-3 mb-3">
               <h5>Social Media</h5>
               <div className="d-flex justify-content-evenly social-icons">
-                <Link
-                  to="https://wa.me/918072988452"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-none text-white"
-                >
-                  <i style={{ fontSize: 30 }} className="ri-whatsapp-fill"></i>
-                </Link>
-                <Link
-                  to="https://www.instagram.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-none text-white"
-                >
-                  <i style={{ fontSize: 30 }} className="ri-instagram-fill"></i>
-                </Link>
-                <Link
-                  to="https://www.linkedin.com/company/cloud-garage-llp/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-decoration-none text-white"
-                >
-                  <i
-                    style={{ fontSize: 30 }}
-                    className="ri-linkedin-box-fill"
-                  ></i>
-                </Link>
+                {data.contact.socialMedia.links.map((social, index) => (
+                  <Link
+                    key={index}
+                    to={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-decoration-none text-white"
+                  >
+                    <i style={{ fontSize: 30 }} className={social.icon}></i>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -86,24 +61,19 @@ function Contact() {
       <footer>
         <div id="footer" className="backgroundfooter p-5 lh-1">
           <div className="container text-center text-white">
+            <p>{data.contact.footer.copyright}</p>
             <p>
-              Copyright &copy; 2024{" "}
-              <span>Cloud Garage LLP All rights reserved</span>
-            </p>
-            <p>
-              <Link
-                to="/terms-and-conditions"
-                className="text-white-50 termandconditionshover"
-              >
-                Terms & Conditions |
-              </Link>
-              <Link
-                to="/Privacy-Policy"
-                className="text-white-50 termandconditionshover"
-              >
-                {" "}
-                Privacy Policy
-              </Link>
+              {data.contact.footer.links.map((link, index) => (
+                <React.Fragment key={index}>
+                  <Link
+                    to={link.href}
+                    className="text-white-50 termandconditionshover"
+                  >
+                    {link.text}
+                  </Link>
+                  {index < data.contact.footer.links.length - 1 && " | "}
+                </React.Fragment>
+              ))}
             </p>
           </div>
         </div>

@@ -3,30 +3,25 @@ import "./About.css";
 import { Link } from "react-router-dom";
 import buyerAboutImg from "../../Asset/b-about-image.png";
 import UploderAboutImg from "../../Asset/u-about-image.png";
+import data from "../../Data/data.json";
 function About() {
   return (
     <>
       <section id="about" className="position-relative margin-top">
         <div className="bg-light p-5 h-100">
           <div className="about-text container">
-            <h1>About</h1>
+            <h1>{data.about.heading.title}</h1>
             <div className="">
               <div
                 data-aos="fade-left"
                 className="d-flex justify-content-between align-items-center flex-wrap"
               >
                 <div className="col-md-5">
-                  <h5>Buyer</h5>
-                  <p>
-                    Purchasing Tickets: Buyers must provide a valid WhatsApp
-                    number or email address to receive purchased tickets.{" "}
-                  </p>
-                  <p>
-                    Accuracy of Information: Buyers must ensure that the contact
-                    information provided is accurate and up-to-date. Tik Tik
-                    will not be responsible for any failure to deliver tickets
-                    due to incorrect contact information.
-                  </p>
+                  <h5>{data.about.sections1.title}</h5>
+
+                  {data.about.sections1.content.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
                 </div>
                 <img
                   src={buyerAboutImg}
@@ -45,17 +40,10 @@ function About() {
                   alt="uploder-about-img"
                 />
                 <div className="col-md-5">
-                  <h5>Uploder</h5>
-                  <p>
-                    Purchasing Tickets: Buyers must provide a valid WhatsApp
-                    number or email address to receive purchased tickets.{" "}
-                  </p>
-                  <p>
-                    Accuracy of Information: Buyers must ensure that the contact
-                    information provided is accurate and up-to-date. Tik Tik
-                    will not be responsible for any failure to deliver tickets
-                    due to incorrect contact information.
-                  </p>
+                  <h5>{data.about.sections2.title}</h5>
+                  {data.about.sections2.content.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
                 </div>
               </div>
             </div>
@@ -64,21 +52,20 @@ function About() {
         <div className="about-card">
           <div className="container row d-flex justify-content-center align-items-center h-100 ps-5 flex-wrap">
             <div className="text-white col">
-              <p className="fs-5">Download Tik Tik tody</p>
-              <h1>Download Tik Tik tody</h1>
+              <p className="fs-5">{data.about.callToAction.heading}</p>
+              <h1>{data.about.callToAction.heading2}</h1>
             </div>
             <div className="col flex-wrap">
-              <Link
-                to="https://play.google.com/store/apps/details?id=com.TikTik"
-                className="call-to-action text-decoration-none"
-              >
-                <i className="ri-google-play-fill"></i>
-                Google play
-              </Link>
-              <Link className="call-to-action ms-5 text-decoration-none">
-                <i className="ri-apple-fill"></i>
-                Apple store
-              </Link>
+              {data.about.callToAction.links.map((link, i) => (
+                <Link
+                  key={i}
+                  to={link.to}
+                  className="call-to-action text-decoration-none ms-2"
+                >
+                  <i className={link.icon}></i>
+                  {link.text}
+                </Link>
+              ))}
             </div>
           </div>
           <div className="moving-image"></div>
