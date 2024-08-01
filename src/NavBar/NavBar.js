@@ -21,7 +21,7 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    const sections = document.querySelectorAll("section, header");
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -30,7 +30,7 @@ const NavBar = () => {
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => {
@@ -43,10 +43,10 @@ const NavBar = () => {
       });
     };
   }, []);
-
+  
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top p-2 rounded-5 ms-5 me-5">
+    <div className="nav-header">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light  p-2 rounded-5 ms-5 me-5">
         <div className="container-fluid">
           <a
             className="navbar-brand"

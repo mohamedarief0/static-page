@@ -16,13 +16,12 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 function Home() {
   return (
     <>
-      {" "}
-      <div id="home"></div>
-      <header style={{ marginTop: "100px" }}>
+      <header id="home" style={{ marginTop: "100px" }}>
         <div
           id="carouselExampleCaptions"
           className="carousel slide margin-top-hero-carousal sm-d-none"
           data-bs-ride="carousel"
+          data-bs-interval="3000" // Adjust the interval to 2000ms (2 seconds)
         >
           <div className="carousel-indicators">
             <button
@@ -48,7 +47,7 @@ function Home() {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={RollImageOne} className="d-block w-100" alt="..." />
+              <img src={RollImageOne} className="d-block w-100" alt="event-banner-img" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -57,7 +56,7 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageTwo} className="d-block w-100" alt="..." />
+              <img src={RollImageTwo} className="d-block w-100" alt="sports-banner-img" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -66,7 +65,7 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageThree} className="d-block w-100" alt="..." />
+              <img src={RollImageThree} className="d-block w-100" alt="movie-banner-img" />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -76,7 +75,7 @@ function Home() {
             </div>
           </div>
           <button
-            className="carousel-control-prev"
+            className="carousel-control-prev d-none"
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="prev"
@@ -88,7 +87,7 @@ function Home() {
             <span className="visually-hidden">Previous</span>
           </button>
           <button
-            className="carousel-control-next"
+            className="carousel-control-next d-none"
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide="next"

@@ -28,14 +28,22 @@ function About() {
                     due to incorrect contact information.
                   </p>
                 </div>
-                <img src={buyerAboutImg} width={400} />
+                <img
+                  src={buyerAboutImg}
+                  className="about-image"
+                  alt="buyer-about-img"
+                />
               </div>
 
               <div
                 data-aos="fade-right"
-                className="d-flex justify-content-between align-items-center"
+                className="d-flex justify-content-between align-items-center flex-wrap-reverse"
               >
-                <img src={UploderAboutImg} width={400} />
+                <img
+                  src={UploderAboutImg}
+                  className="about-image"
+                  alt="uploder-about-img"
+                />
                 <div className="col-md-5">
                   <h5>Uploder</h5>
                   <p>
@@ -54,12 +62,12 @@ function About() {
           </div>
         </div>
         <div className="about-card">
-          <div className="row d-flex  align-items-center p-5">
+          <div className="container row d-flex justify-content-center align-items-center h-100 ps-5 flex-wrap">
             <div className="text-white col">
               <p className="fs-5">Download Tik Tik tody</p>
               <h1>Download Tik Tik tody</h1>
             </div>
-            <div className="col">
+            <div className="col flex-wrap">
               <Link
                 to="https://play.google.com/store/apps/details?id=com.TikTik"
                 className="call-to-action text-decoration-none"

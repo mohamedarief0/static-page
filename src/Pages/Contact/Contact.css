@@ -1,7 +1,7 @@
 /* Remove default background color */
 .backgroundcontact {
   width: 100%;
-  height: 200px;
+  height: 300px;
   position: relative;
   overflow: hidden; /* Ensures the image stays within the div */
 }
@@ -9,8 +9,8 @@
 /* Moving image animation */
 .moving-image {
   width: 100%;
-  height: 400px; /* Set a height larger than the section to create the movement effect */
-  background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+  height: 800px; /* Set a height larger than the section to create the movement effect */
+  background-image: url("../../Asset/tiktik-jagged-min.jpg"); /* Update the path if necessary */
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
@@ -63,4 +63,121 @@
 /* Footer background color */
 .backgroundfooter {
   background-color: rgb(20, 20, 60);
+}
+
+@media screen and (max-width: 1024px) {
+  .backgroundcontact {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* Ensures the image stays within the div */
+  }
+  /* Moving image animation */
+  .moving-image {
+    width: 100%;
+    height: 700px; /* Set a height larger than the section to create the movement effect */
+    background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px; /* Start position to ensure the image is centered in the div */
+    animation: MoveUpDown 4s linear infinite alternate;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      transform: translateY(-50px); /* Move image up */
+    }
+    100% {
+      transform: translateY(50px); /* Move image down */
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .backgroundcontact {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden; /* Ensures the image stays within the div */
+  }
+  /* Moving image animation */
+  .moving-image {
+    width: 100%;
+    height: 500px; /* Set a height larger than the section to create the movement effect */
+    background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px; /* Start position to ensure the image is centered in the div */
+    animation: MoveUpDown 3s linear infinite alternate;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      transform: translateY(-50px); /* Move image up */
+    }
+    100% {
+      transform: translateY(50px); /* Move image down */
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  ul {
+    text-align: left;
+  }
+  .backgroundcontact {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden; /* Ensures the image stays within the div */
+  }
+  /* Moving image animation */
+  .moving-image {
+    width: 100%;
+    height: 500px; /* Set a height larger than the section to create the movement effect */
+    background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px; /* Start position to ensure the image is centered in the div */
+    animation: MoveUpDown 3s linear infinite alternate;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      transform: translateY(-50px); /* Move image up */
+    }
+    100% {
+      transform: translateY(50px); /* Move image down */
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .backgroundcontact {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden; /* Ensures the image stays within the div */
+  }
+  /* Moving image animation */
+  .moving-image {
+    width: 100%;
+    height: 800px; /* Set a height larger than the section to create the movement effect */
+    background-image: url("../../Asset/jagged-min.jpg"); /* Update the path if necessary */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -100px; /* Start position to ensure the image is centered in the div */
+    animation: MoveUpDown 3s linear infinite alternate;
+  }
+
+  @keyframes MoveUpDown {
+    0% {
+      transform: translateY(-50px); /* Move image up */
+    }
+    100% {
+      transform: translateY(50px); /* Move image down */
+    }
+  }
 }

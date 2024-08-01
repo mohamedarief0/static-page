@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Contact.css";
 import { Link } from "react-router-dom";
 
 function Contact() {
   return (
     <>
-      <section id="contact" className="backgroundcontact position-relative">
+      <section id="contact" className="backgroundcontact">
         <div className="moving-image"></div>
-        <div className="container mt-5 position-relative" style={{ zIndex: 1 }}>
+        <div className="container mt-5" style={{ zIndex: 0 }}>
           <div className="text-center text-white row justify-content-around p-5">
             <div className="col-md-3 mb-3">
               <h5>
@@ -22,18 +22,18 @@ function Contact() {
               <ul className="list-unstyled">
                 <li>
                   <Link
-                    to="https://cloudgarage.io"
+                    to="https://tiktik.in"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-decoration-none text-white"
                   >
-                    <i className="ri-global-line"></i> cloudgarage.io
+                    <i className="ri-global-line"></i> tiktik.in
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="mailto:tiktikappcontact@gmail.com"
-                    className="text-decoration-none text-white"
+                    className="text-decoration-none text-white "
                   >
                     <i className="ri-mail-fill"></i> tiktikappcontact@gmail.com
                   </Link>
@@ -52,12 +52,20 @@ function Contact() {
               <h5>Social Media</h5>
               <div className="d-flex justify-content-evenly social-icons">
                 <Link
-                  to="https://wa.me/919597059693"
+                  to="https://wa.me/918072988452"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-decoration-none text-white"
                 >
                   <i style={{ fontSize: 30 }} className="ri-whatsapp-fill"></i>
+                </Link>
+                <Link
+                  to="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none text-white"
+                >
+                  <i style={{ fontSize: 30 }} className="ri-instagram-fill"></i>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/company/cloud-garage-llp/"
@@ -93,7 +101,8 @@ function Contact() {
                 to="/Privacy-Policy"
                 className="text-white-50 termandconditionshover"
               >
-                { " "}Privacy Policy
+                {" "}
+                Privacy Policy
               </Link>
             </p>
           </div>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./ImageCarousel.css"; // Make sure the path is correct
 
-import img1 from "../Asset/home.png";
-import img2 from "../Asset/sports.png";
-import img3 from "../Asset/onboardingscreen.png";
+import homeScreenImg from "../Asset/home.png";
+import sportsScreenImg from "../Asset/sports.png";
+import onboardingScreenImg from "../Asset/onboardingscreen.png";
 
 const ImageCarousel = () => {
   const [positions, setPositions] = useState(["top", "right", "left"]);
@@ -22,19 +22,19 @@ const ImageCarousel = () => {
   return (
     <div className="carousel">
       <img
-        src={img1}
+        src={homeScreenImg}
         className={`carousel-img ${positions[0]}`}
-        alt="Image 1"
+        alt="mobilescreens"
       />
       <img
-        src={img2}
+        src={sportsScreenImg}
         className={`carousel-img ${positions[1]}`}
-        alt="Image 2"
+        alt="mobilescreens"
       />
       <img
-        src={img3}
+        src={onboardingScreenImg}
         className={`carousel-img ${positions[2]}`}
-        alt="Image 3"
+        alt="mobilescreens"
       />
     </div>
   );

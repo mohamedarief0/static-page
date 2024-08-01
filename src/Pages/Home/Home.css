@@ -1,14 +1,12 @@
 .margin-top {
   margin-top: 150px;
 }
-.screen {
-  height: 80vh;
-}
+
 .brandcolor {
-  color: #19def1;
+  color: var(--primary-color);
 }
 .brandtextcolor {
-  color: #263147;
+  color: var(--primary-text-color);
   /* 263147  this the main dull color*/
 }
 .line-height {
