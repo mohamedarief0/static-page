@@ -12,6 +12,7 @@ import RollImageThree from "../../Asset/roll 3.png";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import data from "../../Data/data.json"
 
 function Home() {
   return (
@@ -47,7 +48,11 @@ function Home() {
           </div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src={RollImageOne} className="d-block w-100" alt="event-banner-img" />
+              <img
+                src={RollImageOne}
+                className="d-block w-100"
+                alt="event-banner-img"
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -56,7 +61,11 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageTwo} className="d-block w-100" alt="sports-banner-img" />
+              <img
+                src={RollImageTwo}
+                className="d-block w-100"
+                alt="sports-banner-img"
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -65,7 +74,11 @@ function Home() {
               </div>
             </div>
             <div className="carousel-item">
-              <img src={RollImageThree} className="d-block w-100" alt="movie-banner-img" />
+              <img
+                src={RollImageThree}
+                className="d-block w-100"
+                alt="movie-banner-img"
+              />
               <div className="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -106,19 +119,13 @@ function Home() {
                 <span className="brandcolor">Tik Tik</span> is Movie, Sports and
                 Event a Ticket Resale Platform
               </h2>
-              <p className="text-black-50">
-                Don't the fun. It's simple and quick.
-              </p>
+              <p className="text-black-50">{data.heroSection.description}</p>
               <span>
                 <Link
                   className=""
                   to="https://play.google.com/store/apps/details?id=com.TikTik"
                 >
-                  <LazyLoadImage
-                    src={playstoreImg}
-                    width={120}
-                    alt="playstore-img"
-                  />
+                  <img src={playstoreImg} width={120} alt="playstore-img" />
                 </Link>
                 <Link className="ms-3" href="">
                   <img src={appstoreImg} width={120} alt="appstore-img" />
