@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## i have used one .env file. that file have some values
+
+```
+  REACT_API="<emter your api end point>"
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
