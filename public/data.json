@@ -1,0 +1,173 @@
+{
+  "home":{
+    "appLinks": [
+      {
+        "to": "https://play.google.com/store/apps/details?id=com.TikTik",
+        "src": "/Asset/google-play.png",
+        "alt": "playstore-img",
+        "width": 120
+      },
+      {
+        "href": "",
+        "src": "/Asset/apple-store.png",
+        "alt": "appstore-img",
+        "width": 120
+      }
+    ],
+    "heroSection": {
+      "heading": {
+        "text": "is Movie, Sports and Event a Ticket Resale Platform",
+        "brandName": "Tik Tik"
+      },
+      "description": "Don't the fun. It's simple and quick."
+    }
+  },
+  "feature": {
+    "heading": {
+      "title": "Features",
+      "description": "We make it simple and fast buying and selling Tickets at anytime and any where"
+    },
+    "features": [
+      {
+        "icon": "ri-file-upload-fill",
+        "iconColor": "#18C1F5",
+        "text": "Upload Ticket"
+      },
+      {
+        "icon": "ri-bank-fill",
+        "iconColor": "#18C1F5",
+        "text": "Bank account"
+      },
+      {
+        "icon": "ri-shopping-cart-fill",
+        "iconColor": "#18C1F5",
+        "text": "Buyer Ticket"
+      },
+      {
+        "icon": "ri-swap-3-fill",
+        "iconColor": "#18C1F5",
+        "text": "Seller to buyer"
+      },
+      {
+        "icon": "ri-swap-2-fill",
+        "iconColor": "#18C1F5",
+        "text": "Buyer to seller"
+      },
+      {
+        "icon": "ri-money-rupee-circle-fill",
+        "iconColor": "#18C1F5",
+        "text": "Transaction"
+      }
+    ],
+    "additionalText": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "videoSection": {
+      "text": "Watch video presentation",
+      "videoId": "o7ewg-Zk3pA"
+    }
+  },
+  "about": {
+    "heading": {
+      "title": "About"
+    },
+    "sections1": {
+      "title": "Buyer",
+      "content": [
+        "Purchasing Tickets: Buyers must provide a valid WhatsApp number or email address to receive purchased tickets.",
+        "Accuracy of Information: Buyers must ensure that the contact information provided is accurate and up-to-date. Tik Tik will not be responsible for any failure to deliver tickets due to incorrect contact information."
+      ],
+      "image": {
+        "src": "Asset/b-about-image.png",
+        "alt": "buyer-about-img"
+      },
+      "animation": "fade-left"
+    },
+    "sections2": {
+      "title": "Uploader",
+      "content": [
+        "Purchasing Tickets: Buyers must provide a valid WhatsApp number or email address to receive purchased tickets.",
+        "Accuracy of Information: Buyers must ensure that the contact information provided is accurate and up-to-date. Tik Tik will not be responsible for any failure to deliver tickets due to incorrect contact information."
+      ],
+      "image": {
+        "src": "Asset/u-about-image.png",
+        "alt": "uploader-about-img"
+      },
+      "animation": "fade-right"
+    },
+    "callToAction": {
+      "heading": "Download Tik Tik today",
+      "heading2": "Download this app now",
+      "links": [
+        {
+          "to": "https://play.google.com/store/apps/details?id=com.TikTik",
+          "icon": "ri-google-play-fill",
+          "text": "Google Play"
+        },
+        {
+          "to": "",
+          "icon": "ri-apple-fill",
+          "text": "Apple Store"
+        }
+      ]
+    }
+  },
+  "contact": {
+    "location": {
+      "icon": "ri-compass-3-fill",
+      "address": "80G/3, Kamban Nagar, Elambalur Road, Perambalur-621212"
+    },
+    "contact": {
+      "links": [
+        {
+          "href": "https://tiktik.in",
+          "icon": "ri-global-line",
+          "text": "tiktik.in",
+          "type": "external"
+        },
+        {
+          "href": "mailto:support@tiktik.in",
+          "icon": "ri-mail-fill",
+          "text": "support@tiktik.in",
+          "type": "email"
+        },
+        {
+          "href": "tel:+919597059693",
+          "icon": "ri-phone-fill",
+          "text": "+91 95970 59693",
+          "type": "phone"
+        }
+      ]
+    },
+    "socialMedia": {
+      "links": [
+        {
+          "href": "https://wa.me/918072988452",
+          "icon": "ri-whatsapp-fill",
+          "alt": "WhatsApp"
+        },
+        {
+          "href": "https://www.instagram.com/",
+          "icon": "ri-instagram-fill",
+          "alt": "Instagram"
+        },
+        {
+          "href": "https://www.linkedin.com/company/cloud-garage-llp/",
+          "icon": "ri-linkedin-box-fill",
+          "alt": "LinkedIn"
+        }
+      ]
+    },
+    "footer": {
+      "copyright": "Copyright &copy; 2024 Cloud Garage LLP All rights reserved",
+      "links": [
+        {
+          "href": "/terms-and-conditions",
+          "text": "Terms & Conditions"
+        },
+        {
+          "href": "/Privacy-Policy",
+          "text": "Privacy Policy"
+        }
+      ]
+    }
+  }
+}
