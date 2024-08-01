@@ -2,10 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## i have used one .env file. that file have some values
+## Create this .env file in the root folder or you can use these value directly in firebase.js
 
 ```
-  REACT_API="<emter your api end point>"
+  REACT_APP_FIREBASE_API_KEY="apikey"
+  REACT_APP_FIREBASE_AUTH_DOMAIN="authDomain"
+  REACT_APP_FIREBASE_PROJECT_ID="projectId"
+  REACT_APP_FIREBASE_STORAGE_BUCKET="storgeBucket"
+  REACT_APP_FIREBASE_MESSAGING_SENDER_ID="messagingSenderId"
+  REACT_APP_FIREBASE_APP_ID="firebaseAppId"
+  REACT_APP_FIREBASE_MEASUREMENT_ID="measurmentId"
 ```
 
 ## Available Scripts
