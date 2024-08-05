@@ -1,5 +1,5 @@
 {
-  "home":{
+  "home": {
     "appLinks": [
       {
         "to": "https://play.google.com/store/apps/details?id=com.TikTik",
@@ -20,11 +20,33 @@
         "brandName": "Tik Tik"
       },
       "description": "Don't the fun. It's simple and quick."
+    },
+    "carousel": {
+      "slides": [
+        {
+          "src": "Asset/roll 1.png",
+          "alt": "event-banner-img",
+          "label": "First slide label",
+          "description": "Some representative placeholder content for the first slide."
+        },
+        {
+          "src": "Asset/roll 2.png",
+          "alt": "sports-banner-img",
+          "label": "Second slide label",
+          "description": "Some representative placeholder content for the second slide."
+        },
+        {
+          "src": "Asset/roll 3.png",
+          "alt": "movie-banner-img",
+          "label": "Third slide label",
+          "description": "Some representative placeholder content for the third slide."
+        }
+      ]
     }
   },
   "feature": {
     "heading": {
-      "title": "Features",
+      "title": "Feature",
       "description": "We make it simple and fast buying and selling Tickets at anytime and any where"
     },
     "features": [

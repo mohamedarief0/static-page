@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-//Carousel
+// Carousel
 import ImageCarousel from "../../ImageCarousel/ImageCarousel";
-//img
+// img
 import playstoreImg from "../../Asset/google-play.png";
 import appstoreImg from "../../Asset/apple-store.png";
-//slider
+// slider
 import RollImageOne from "../../Asset/roll 1.png";
 import RollImageTwo from "../../Asset/roll 2.png";
 import RollImageThree from "../../Asset/roll 3.png";
@@ -12,45 +12,9 @@ import RollImageThree from "../../Asset/roll 3.png";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
-import data from "../../Data/data.json";
+import data from "../../Data/data.json"
 
 function Home() {
-  const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
-  const REPO_OWNER = "mohamedarief0";
-  const REPO_NAME = "static-page";
-  const FILE_PATH = "data.json";
-
-  const POLLING_INTERVAL = 60000; // 1 minute
-
-  const [data, setData] = useState(null);
-
-
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`,
-        {
-          headers: {
-            Authorization: `token ${GITHUB_TOKEN}`,
-            Accept: "application/vnd.github.v3.raw",
-          },
-        }
-      );
-      setData(response.data);
-   
-    } catch (error) {
-      console.error("Error fetching data:", error);
-     
-    }
-  };
-
-  useEffect(() => {
-    fetchData(); // Initial fetch
-    const intervalId = setInterval(fetchData, POLLING_INTERVAL); // Poll every minute
-
-    return () => clearInterval(intervalId); // Cleanup on unmount
-  }, []);
   return (
     <>
       <header id="home" style={{ marginTop: "100px" }}>
@@ -149,7 +113,7 @@ function Home() {
           </button>
         </div>
         <div className="container margin-header-minus herocontainers position-relative">
-          <div className="row row-cols-sm-1 row-cols-md-2 justify-content-between align-items-center  margin-on-title">
+          <div className="row row-cols-sm-1 row-cols-md-2 justify-content-between align-items-center margin-on-title">
             <div className="">
               <h2 className="line-height brandtextcolor col-md-10">
                 <span className="brandcolor">
